@@ -13,6 +13,8 @@ final class AppDetailViewController: UIViewController {
     public var app: ITunesApp
     
     lazy var headerViewController = AppDetailHeaderViewController(app: app)
+    lazy var versionViewController = AppDetailNewInfoViewController(app: app)
+
     
     private let imageDownloader = ImageDownloader()
     
@@ -70,17 +72,15 @@ final class AppDetailViewController: UIViewController {
     }
     
     private func addDescriptionViewController() {
-        //ДЗ: Добавить другие модули
-        let descriptionControlller = UIViewController()
+        self.addChild(versionViewController)
+        self.view.addSubview(versionViewController.view)
+        versionViewController.didMove(toParent: self)
         
-        self.addChild(descriptionControlller)
-        self.view.addSubview(descriptionControlller.view)
-        descriptionControlller.didMove(toParent: self)
-        
+        versionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            descriptionControlller.view.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-            descriptionControlller.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            descriptionControlller.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            versionViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor, constant: 10),
+            versionViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            versionViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
         ])
     }
     

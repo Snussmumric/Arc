@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "123C61D1-FF8D-4380-9DD2-C01FABE18C68"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92CDE9EF-2F97-486E-BED2-D410A6ACBD0D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "jsonRequest(_:then:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "92CDE9EF-2F97-486E-BED2-D410A6ACBD0D - 6a9499e06a223342"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSArchitecturesDemo.NetworkManager.jsonRequest(_: iOSArchitecturesDemo.WebRequest, then: Swift.Optional&lt;(Alamofire.Result&lt;Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "iOSArchitecturesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anton/Documents/Swift_learning/Arc/iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "71">
+               </Location>
+               <Location
+                  uuid = "92CDE9EF-2F97-486E-BED2-D410A6ACBD0D - 49e13ed58502559"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in iOSArchitecturesDemo.NetworkManager.jsonRequest(_: iOSArchitecturesDemo.WebRequest, then: Swift.Optional&lt;(Alamofire.Result&lt;Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "iOSArchitecturesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anton/Documents/Swift_learning/Arc/iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31AED0E7-3B03-43F4-8141-B04CB446ACA7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "jsonRequest(_:then:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6169C0ED-3589-4BF6-B582-C6000746C1D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "dataRequest(_:then:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6169C0ED-3589-4BF6-B582-C6000746C1D1 - e353f0be4c0809ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSArchitecturesDemo.NetworkManager.dataRequest(_: iOSArchitecturesDemo.WebRequest, then: Swift.Optional&lt;(Alamofire.Result&lt;Foundation.Data&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "iOSArchitecturesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anton/Documents/Swift_learning/Arc/iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "71">
+               </Location>
+               <Location
+                  uuid = "6169C0ED-3589-4BF6-B582-C6000746C1D1 - c12e15da269a988d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in iOSArchitecturesDemo.NetworkManager.dataRequest(_: iOSArchitecturesDemo.WebRequest, then: Swift.Optional&lt;(Alamofire.Result&lt;Foundation.Data&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "iOSArchitecturesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anton/Documents/Swift_learning/Arc/iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA577F2E-F0BD-4A0C-8B2E-C65B980BE827"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "dataRequest(_:then:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19320B96-691B-4E98-A31F-E0282DF16D85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "jsonRequest(_:then:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C7FCBE9-AC29-4DDC-A11E-682568D4AC27"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Core/NetworkManager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "dataRequest(_:then:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

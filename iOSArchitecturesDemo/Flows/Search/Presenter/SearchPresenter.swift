@@ -27,6 +27,9 @@ class Presenter {
     weak var viewInput: (UIViewController & SearchViewInput)?
     private let searchService = ITunesSearchService()
     
+    
+    
+    
     private func requestApps(with query: String) {
         searchService.getApps(forQuery: query) { [weak self] (result) in
             guard let self = self else { return }
@@ -35,6 +38,7 @@ class Presenter {
             result.withValue { (apps) in
                 guard !apps.isEmpty else {
                     self.viewInput?.showNoResults()
+                    
                     return
                 }
                 
