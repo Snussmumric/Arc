@@ -16,6 +16,10 @@ final class SearchView: UIView {
     let tableView = UITableView()
     let emptyResultView = UIView()
     let emptyResultLabel = UILabel()
+    let searchTypeSegment = UISegmentedControl(items: ["app", "song"])
+    let searchMode = SearchTypeMode.shared
+
+    
     
     // MARK: - Init
     
@@ -33,10 +37,55 @@ final class SearchView: UIView {
     
     private func configureUI() {
         self.backgroundColor = .white
+        self.addSearchTypeSegment()
         self.addSearchBar()
         self.addTableView()
         self.addEmptyResultView()
         self.setupConstraints()
+
+    }
+    
+    private func addSearchTypeSegment() {
+        searchTypeSegment.selectedSegmentIndex = 0
+        
+        // Set up Frame and SegmentedControl
+        let frame = UIScreen.main.bounds
+        self.searchBar.translatesAutoresizingMaskIntoConstraints = false
+
+        self.searchTypeSegment.frame = CGRect(x: 0, y: 0, width: frame.width, height: 50)
+
+        // Style the Segmented Control
+        self.searchTypeSegment.layer.cornerRadius = 5.0  // Don't let background bleed
+        self.searchTypeSegment.backgroundColor = UIColor.black
+        self.searchTypeSegment.tintColor = UIColor.white
+
+        // Add target action method
+        self.searchTypeSegment.addTarget(self, action: #selector(segmentedValueChanged), for:.valueChanged)
+        
+
+//        self.searchTypeSegment.addTarget(self, action: Selector(("segmentedValueChanged:")), for: .touchUpInside)
+
+//        self.searchTypeSegment.actions(forTarget: "changeColor:", forControlEvent: .valueChanged)
+
+        // Add this custom Segmented Control to our view
+        self.addSubview(self.searchTypeSegment)
+    }
+    
+    @objc private func segmentedValueChanged()
+    {
+        switch self.searchTypeSegment.selectedSegmentIndex {
+        case 0:
+            searchMode.mode = .app
+            self.searchBar.text?.removeAll()
+            self.tableView.reloadData()
+        case 1:
+            searchMode.mode = .song
+            self.searchBar.text?.removeAll()
+            self.tableView.reloadData()
+
+        default:
+            break
+        }
     }
     
     private func addSearchBar() {
@@ -73,7 +122,12 @@ final class SearchView: UIView {
         let safeArea = self.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            self.searchBar.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
+            
+            self.searchTypeSegment.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
+            self.searchTypeSegment.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+            self.searchTypeSegment.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+            
+            self.searchBar.topAnchor.constraint(equalTo: self.searchTypeSegment.bottomAnchor),
             self.searchBar.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             self.searchBar.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
             
