@@ -37,7 +37,6 @@ class AppDetailNewInfoViewController: UIViewController {
     }
     
     private func fillData() {
-        
         appDetailHeaderView.versionNumberLabel.text = app.version
         appDetailHeaderView.versionHistoryLabel.text = app.currentVersionReleaseDate
         appDetailHeaderView.versionInfoLabel.text = app.releaseNotes

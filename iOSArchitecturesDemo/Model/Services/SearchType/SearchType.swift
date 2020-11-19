@@ -11,3 +11,12 @@ import Foundation
 enum SearchType {
     case app, song
 }
+
+final class SearchTypeMode {
+    
+    static let shared = SearchTypeMode()
+    
+    var mode: SearchType = .app
+
+    
+}

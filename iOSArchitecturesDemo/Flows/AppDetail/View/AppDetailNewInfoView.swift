@@ -45,7 +45,7 @@ class AppDetailNewInfoView: UIView {
     private(set) lazy var versionHistoryButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("version history", for: .normal)
+        button.setTitle("Version history", for: .normal)
         button.backgroundColor = UIColor(white: 0.3, alpha: 1.0)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
 //        button.layer.cornerRadius = 16.0
@@ -83,21 +83,16 @@ class AppDetailNewInfoView: UIView {
         NSLayoutConstraint.activate([
             whatsNewLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 12),
             whatsNewLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16.0),
-//            whatsNewLabel.widthAnchor.constraint(equalToConstant: 80),
 
             
             versionNumberLabel.topAnchor.constraint(equalTo: whatsNewLabel.bottomAnchor, constant: 12),
-//            versionNumberLabel.leftAnchor.constraint(equalTo: whatsNewLabel.rightAnchor, constant: ),
             versionNumberLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             
             versionHistoryLabel.topAnchor.constraint(equalTo: versionHistoryButton.bottomAnchor, constant: 12.0),
-//            versionHistoryLabel.leftAnchor.constraint(equalTo: versionNumberLabel.leftAnchor),
             versionHistoryLabel.rightAnchor.constraint(equalTo: rightAnchor),
             
-//            versionHistoryButton.leftAnchor.constraint(equalTo: whatsNewLabel.rightAnchor, constant: 16),
             versionHistoryButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 12),
             versionHistoryButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-//            versionHistoryButton.widthAnchor.constraint(equalToConstant: 80),
             versionHistoryButton.heightAnchor.constraint(equalToConstant: 32),
             
             versionInfoLabel.topAnchor.constraint(equalTo: versionNumberLabel.bottomAnchor, constant: 24),

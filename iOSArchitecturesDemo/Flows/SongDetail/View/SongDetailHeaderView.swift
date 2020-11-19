@@ -1,14 +1,15 @@
 //
-//  AppDetailHeaderView.swift
+//  SongDetailHeaderView.swift
 //  iOSArchitecturesDemo
 //
-//  Created by Veaceslav Chirita on 11/12/20.
+//  Created by Антон Васильченко on 19.11.2020.
 //  Copyright © 2020 ekireev. All rights reserved.
 //
 
+
 import UIKit
 
-class AppDetailHeaderView: UIView {
+class SongDetailHeaderView: UIView {
     
     private(set) lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -41,7 +42,7 @@ class AppDetailHeaderView: UIView {
     private(set) lazy var openButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Open", for: .normal)
+        button.setTitle("Купить", for: .normal)
         button.backgroundColor = UIColor(white: 0.3, alpha: 1.0)
         button.layer.cornerRadius = 16.0
         
@@ -53,6 +54,7 @@ class AppDetailHeaderView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.numberOfLines = 0
         
         return label
     }()
@@ -95,7 +97,7 @@ class AppDetailHeaderView: UIView {
             
             ratingLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24),
             ratingLabel.leftAnchor.constraint(equalTo: imageView.leftAnchor),
-            ratingLabel.widthAnchor.constraint(equalToConstant: 100),
+            ratingLabel.widthAnchor.constraint(equalTo: widthAnchor),
             ratingLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
             
             

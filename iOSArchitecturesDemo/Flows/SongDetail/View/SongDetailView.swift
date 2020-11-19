@@ -1,14 +1,14 @@
 //
-//  AppDetailView.swift
+//  SongDetailView.swift
 //  iOSArchitecturesDemo
 //
-//  Created by Evgeny Kireev on 02/06/2019.
-//  Copyright © 2019 ekireev. All rights reserved.
+//  Created by Антон Васильченко on 19.11.2020.
+//  Copyright © 2020 ekireev. All rights reserved.
 //
 
 import UIKit
 
-final class AppDetailView: UIView {
+final class SongDetailView: UIView {
     
     // MARK: - Subviews
     

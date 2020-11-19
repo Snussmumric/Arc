@@ -17,6 +17,7 @@ final class SearchView: UIView {
     let emptyResultView = UIView()
     let emptyResultLabel = UILabel()
     let searchTypeSegment = UISegmentedControl(items: ["app", "song"])
+    let searchMode = SearchTypeMode.shared
 
     
     
@@ -59,10 +60,32 @@ final class SearchView: UIView {
         self.searchTypeSegment.tintColor = UIColor.white
 
         // Add target action method
-        self.searchTypeSegment.actions(forTarget: "changeColor:", forControlEvent: .valueChanged)
+        self.searchTypeSegment.addTarget(self, action: #selector(segmentedValueChanged), for:.valueChanged)
+        
+
+//        self.searchTypeSegment.addTarget(self, action: Selector(("segmentedValueChanged:")), for: .touchUpInside)
+
+//        self.searchTypeSegment.actions(forTarget: "changeColor:", forControlEvent: .valueChanged)
 
         // Add this custom Segmented Control to our view
         self.addSubview(self.searchTypeSegment)
+    }
+    
+    @objc private func segmentedValueChanged()
+    {
+        switch self.searchTypeSegment.selectedSegmentIndex {
+        case 0:
+            searchMode.mode = .app
+            self.searchBar.text?.removeAll()
+            self.tableView.reloadData()
+        case 1:
+            searchMode.mode = .song
+            self.searchBar.text?.removeAll()
+            self.tableView.reloadData()
+
+        default:
+            break
+        }
     }
     
     private func addSearchBar() {
