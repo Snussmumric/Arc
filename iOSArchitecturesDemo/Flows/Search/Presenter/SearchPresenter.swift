@@ -30,9 +30,13 @@ class Presenter {
     private let searchService = ITunesSearchService()
     let searchMode = SearchTypeMode.shared
 
-    
-    
-    
+    let interactor: SearchInteractorInput
+    let router: SearchRouterInput
+
+    init(interactor: SearchInteractorInput, router: SearchRouterInput) {
+        self.interactor = interactor
+        self.router = router
+    }
     
     private func requestApps(with query: String) {
         searchService.getApps(forQuery: query) { [weak self] (result) in
@@ -89,9 +93,6 @@ class Presenter {
 }
 
 extension Presenter: SearchViewOutput {
-    func viewDidSelectSong(song: ITunesSong) {
-        openSongDetails(with: song)
-    }
     
     func viewDidSearch(with query: String) {
         viewInput?.throbber(show: true)
@@ -105,8 +106,11 @@ extension Presenter: SearchViewOutput {
     }
     
     func viewDidSelectApp(app: ITunesApp) {
-        openAppDetails(with: app)
+        self.router.openDetails(for: app)
     }
-    
-    
+
+
+    func viewDidSelectSong(song: ITunesSong) {
+        self.router.openDetails(for: song)
+    }
 }
