@@ -1,29 +1,29 @@
 //
-//  AppDetailViewController.swift
+//  SongDetailViewController.swift
 //  iOSArchitecturesDemo
 //
-//  Created by ekireev on 20.02.2018.
-//  Copyright © 2018 ekireev. All rights reserved.
+//  Created by Антон Васильченко on 19.11.2020.
+//  Copyright © 2020 ekireev. All rights reserved.
 //
+
 
 import UIKit
 
-final class AppDetailViewController: UIViewController {
+final class SongDetailViewController: UIViewController {
     
-    public var app: ITunesApp
+    public var song: ITunesSong
     
-    lazy var headerViewController = AppDetailHeaderViewController(app: app)
-    lazy var versionViewController = AppDetailNewInfoViewController(app: app)
+    lazy var headerViewController = SongDetailHeaderViewController(song: song)
 
     
     private let imageDownloader = ImageDownloader()
     
-    private var appDetailView: AppDetailView {
-        return self.view as! AppDetailView
+    private var songDetailView: SongDetailView {
+        return self.view as! SongDetailView
     }
     
-    init(app: ITunesApp) {
-        self.app = app
+    init(song: ITunesSong) {
+        self.song = song
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -54,7 +54,7 @@ final class AppDetailViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         
         addHeaderViewController()
-        addDescriptionViewController()
+    
         
     }
     
@@ -71,26 +71,15 @@ final class AppDetailViewController: UIViewController {
         ])
     }
     
-    private func addDescriptionViewController() {
-        self.addChild(versionViewController)
-        self.view.addSubview(versionViewController.view)
-        versionViewController.didMove(toParent: self)
-        
-        versionViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            versionViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor, constant: 10),
-            versionViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            versionViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-        ])
-    }
+
     
 //    // MARK: - Private
-//    
+//
 //    private func configureNavigationController() {
 //        self.navigationController?.navigationBar.tintColor = UIColor.white;
 //        self.navigationItem.largeTitleDisplayMode = .never
 //    }
-//    
+//
 //    private func downloadImage() {
 //        guard let url = self.app?.iconUrl else { return }
 //        self.appDetailView.throbber.startAnimating()
